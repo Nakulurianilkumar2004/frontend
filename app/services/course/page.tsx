@@ -171,7 +171,7 @@ export default function CoursePage() {
 
                     <div>
                         <h2 className="text-3xl md:text-4xl font-bold">
-                            Start Your AI Journey 🚀
+                            Start Your AI Journey
                         </h2>
 
                         <p className="mt-5 text-blue-100">

@@ -31,7 +31,7 @@ export default function FreelanceGuidePage() {
             {/* ================= INTRO ================= */}
             <section className="max-w-3xl mx-auto text-center">
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-                    Freelancing Project Development Guide 💼
+                    Freelancing Project Development Guide
                 </h1>
 
                 <p className="mt-4 text-gray-600 text-lg">
@@ -165,7 +165,7 @@ export default function FreelanceGuidePage() {
             <section className="max-w-4xl mx-auto mt-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 rounded-3xl text-center shadow-xl">
 
                 <h2 className="text-2xl md:text-3xl font-bold">
-                    Ready to Build Your Project? 🚀
+                    Ready to Build Your Project?
                 </h2>
 
                 <p className="mt-4 text-blue-100">

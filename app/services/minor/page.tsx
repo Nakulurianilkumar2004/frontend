@@ -188,7 +188,7 @@ export default function ProjectsPage() {
 
                     <div>
                         <h2 className="text-3xl md:text-4xl font-bold">
-                            Complete Guidance Until Submission 🚀
+                            Complete Guidance Until Submission
                         </h2>
 
                         <p className="mt-5 text-blue-100">

@@ -42,7 +42,7 @@ export default function FreelancingBlogPage() {
             {/* HERO */}
             <section className="max-w-4xl mx-auto text-center px-6 py-12">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-                    Freelancing Development Services 🚀
+                    Freelancing Development Services
                 </h1>
                 <p className="mt-4 text-lg text-gray-600">
                     We deliver <strong>custom client-based projects</strong> using
@@ -153,7 +153,7 @@ export default function FreelancingBlogPage() {
             {/* CTA */}
             <section className="max-w-5xl mx-auto px-6 pb-20">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 rounded-3xl text-center shadow-xl">
-                    <h2 className="text-3xl font-bold">Start Your Project Today 🚀</h2>
+                    <h2 className="text-3xl font-bold">Start Your Project Today </h2>
                     <p className="mt-3 text-blue-100">
                         Get a powerful, scalable, and SEO-optimized solution built for your needs.
                     </p>

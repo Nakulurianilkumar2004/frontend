@@ -144,7 +144,7 @@ export default function ResearchPage() {
 
                     <div>
                         <h2 className="text-3xl md:text-4xl font-bold">
-                            Publish with Confidence 🚀
+                            Publish with Confidence
                         </h2>
 
                         <p className="mt-5 text-blue-100">

@@ -36,7 +36,7 @@ export default function CourseBlogPage() {
             {/* ================= HERO ================= */}
             <section className="max-w-3xl mx-auto text-center px-6 py-10">
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                    Learn AI from Scratch in 1 Month 🚀
+                    Learn AI from Scratch in 1 Month
                 </h1>
 
                 <p className="mt-4 text-gray-600 text-lg">
@@ -178,7 +178,7 @@ export default function CourseBlogPage() {
             <section className="max-w-5xl mx-auto px-6 mt-20 mb-16">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 md:p-14 rounded-3xl text-center shadow-xl">
                     <h2 className="text-2xl md:text-3xl font-bold">
-                        Start Your AI Journey Today 🚀
+                        Start Your AI Journey Today
                     </h2>
 
                     <p className="mt-4 text-blue-100 max-w-2xl mx-auto">

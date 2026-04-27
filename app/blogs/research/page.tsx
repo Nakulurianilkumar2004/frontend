@@ -59,9 +59,9 @@ export default function ResearchBlogPage() {
                         src="/research1.png"
                         alt="Research paper guidance"
                         fill
-                        sizes="100vw"
-                        className="object-cover"
                         priority
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
                     />
                 </div>
             </section>
@@ -144,7 +144,7 @@ export default function ResearchBlogPage() {
             {/* CTA */}
             <section className="max-w-5xl mx-auto px-6 pb-20">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 rounded-3xl text-center shadow-xl">
-                    <h2 className="text-3xl font-bold">Get Your Paper Published 🚀</h2>
+                    <h2 className="text-3xl font-bold">Get Your Paper Published </h2>
                     <p className="mt-3 text-blue-100">
                         From idea to publication, we help you create high-quality research papers ready for submission.
                     </p>

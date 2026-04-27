@@ -97,12 +97,12 @@ export default function ContactPage() {
                         <CardContent className="p-6 space-y-4">
                             <div className="flex items-center gap-3">
                                 <Phone className="text-blue-600" />
-                                <span className="text-gray-700">+91 98765 43210</span>
+                                <span className="text-gray-700">+91 9392832240</span>
                             </div>
 
                             <div className="flex items-center gap-3">
                                 <Mail className="text-purple-600" />
-                                <span className="text-gray-700">youremail@gmail.com</span>
+                                <span className="text-gray-700">sterobyte@gmail.com</span>
                             </div>
                         </CardContent>
                     </Card>

@@ -31,7 +31,7 @@ export default function AILearningGuidePage() {
             {/* ================= INTRO ================= */}
             <section className="max-w-3xl mx-auto text-center">
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-                    AI Learning Guide for Beginners 🤖
+                    AI Learning Guide for Beginners
                 </h1>
 
                 <p className="mt-4 text-gray-600 text-lg">
@@ -152,7 +152,7 @@ export default function AILearningGuidePage() {
             <section className="max-w-4xl mx-auto mt-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 rounded-3xl text-center shadow-xl">
 
                 <h2 className="text-2xl md:text-3xl font-bold">
-                    Start Learning AI Today 🚀
+                    Start Learning AI Today
                 </h2>
 
                 <p className="mt-4 text-blue-100">

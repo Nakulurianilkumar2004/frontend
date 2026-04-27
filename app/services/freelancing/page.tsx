@@ -172,7 +172,7 @@ export default function FreelancingClient() {
 
                     <div>
                         <h2 className="text-3xl md:text-4xl font-bold">
-                            Let’s Work Together 🚀
+                            Let’s Work Together
                         </h2>
 
                         <p className="mt-5 text-blue-100 max-w-lg">
