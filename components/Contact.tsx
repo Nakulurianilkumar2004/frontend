@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
                                 className="flex items-center justify-center md:justify-start gap-2 hover:text-blue-600 transition"
                             >
                                 <FiMail size={18} />
-                                <span>sterobyte@gmail.com</span>
+                                <span>sterobytefounder@gmail.com</span>
                             </a>
 
                         </div>

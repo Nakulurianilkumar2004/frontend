@@ -102,7 +102,7 @@ export default function ContactPage() {
 
                             <div className="flex items-center gap-3">
                                 <Mail className="text-purple-600" />
-                                <span className="text-gray-700">sterobyte@gmail.com</span>
+                                <span className="text-gray-700">sterobytefounder@gmail.com</span>
                             </div>
                         </CardContent>
                     </Card>

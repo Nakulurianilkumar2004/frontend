@@ -108,10 +108,10 @@ const Footer: React.FC = () => {
 
                             <li>
                                 <a
-                                    href="mailto:sterobyte@gmail.com"
+                                    href="mailto:sterobytefounder@gmail.com"
                                     className="hover:text-white transition"
                                 >
-                                    ✉️ sterobyte@gmail.com
+                                    ✉️ sterobytefounder@gmail.com
                                 </a>
                             </li>
                         </ul>

@@ -3,7 +3,7 @@
 import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppButton() {
-    const phoneNumber = "916305101934"; // 🔥 replace your number
+    const phoneNumber = "9392832240"; // 🔥 replace your number
 
     return (
         <div className="fixed bottom-6 right-6 z-50">
