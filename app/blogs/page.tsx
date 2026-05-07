@@ -6,9 +6,43 @@ import Newsletter from "@/components/Newsletter";
 
 /* ================= SEO ================= */
 export const metadata: Metadata = {
-    title: "Blogs | Zolentha",
+    title: "Blogs on AI, Freelancing & Development | NexalyTech",
     description:
-        "Explore blogs on freelancing, AI, research guidance, and project development with real-world insights.",
+        "Explore NexalyTech blogs on AI development, freelancing, research guidance, and project development. Learn real-world skills with practical insights.",
+    keywords: [
+        "NexalyTech blogs",
+        "AI blogs India",
+        "freelancing development blogs",
+        "research paper guidance",
+        "project development tutorials",
+        "machine learning blogs",
+    ],
+    alternates: {
+        canonical: "https://www.nexalytech.com/blogs",
+    },
+    openGraph: {
+        title: "NexalyTech Blogs | AI, Freelancing & Development",
+        description:
+            "Learn AI, freelancing, and development with real-world blogs from NexalyTech.",
+        url: "https://www.nexalytech.com/blogs",
+        siteName: "NexalyTech",
+        images: [
+            {
+                url: "/blog1.png",
+                width: 1200,
+                height: 630,
+                alt: "NexalyTech Blogs",
+            },
+        ],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "NexalyTech Blogs",
+        description:
+            "Explore AI, freelancing, and development blogs with practical insights.",
+        images: ["/blog1.png"],
+    },
 };
 
 /* ================= DATA ================= */
@@ -16,7 +50,7 @@ const blogCategories = [
     {
         id: "freelancing",
         title: "Freelancing Development",
-        desc: "Learn real-world client projects using full-stack and AI.",
+        desc: "Learn how to build real-world client projects using full-stack and AI technologies.",
         href: "/blogs/freelancing",
         image: "/blog1.png",
         readTime: "5 min read",
@@ -24,7 +58,7 @@ const blogCategories = [
     {
         id: "research",
         title: "Research Guidance",
-        desc: "Step-by-step process to write research papers.",
+        desc: "Step-by-step guide to writing research papers and publishing successfully.",
         href: "/blogs/research",
         image: "/blog2.png",
         readTime: "6 min read",
@@ -32,7 +66,7 @@ const blogCategories = [
     {
         id: "projects",
         title: "Projects Guidance",
-        desc: "Build academic and real-world projects.",
+        desc: "Build academic and real-world projects with proper architecture and execution.",
         href: "/blogs/projects",
         image: "/blog4.png",
         readTime: "7 min read",
@@ -40,7 +74,7 @@ const blogCategories = [
     {
         id: "course",
         title: "AI Course",
-        desc: "Learn AI, ML, and Deep Learning.",
+        desc: "Learn Artificial Intelligence, Machine Learning, and Deep Learning concepts.",
         href: "/blogs/course",
         image: "/blog3.png",
         readTime: "8 min read",
@@ -53,7 +87,6 @@ function HeroSection() {
         <section className="bg-gradient-to-b from-gray-50 to-white border-b">
             <div className="max-w-6xl mx-auto px-6 py-16 text-center">
 
-                {/* Back to Home */}
                 <div className="flex justify-start mb-6">
                     <Link
                         href="/"
@@ -64,13 +97,15 @@ function HeroSection() {
                     </Link>
                 </div>
 
+                {/* ✅ SEO H1 */}
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                    Learn Skills That Matter
+                    NexalyTech Blogs on AI, Freelancing & Development
                 </h1>
 
                 <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-                    Explore high-quality blogs on freelancing, AI, research,
-                    and project development. Build real-world skills and grow your career.
+                    Discover high-quality blogs on AI development, freelancing,
+                    research guidance, and project building. Learn practical skills
+                    and grow your career with NexalyTech.
                 </p>
             </div>
         </section>
@@ -84,11 +119,10 @@ function BlogCard({ cat, index }: any) {
 
             <Link href={cat.href}>
 
-                {/* Image */}
                 <div className="relative h-52 w-full overflow-hidden">
                     <Image
                         src={cat.image}
-                        alt={cat.title}
+                        alt={`${cat.title} - NexalyTech blog`}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
                         priority={index === 0}
@@ -97,10 +131,10 @@ function BlogCard({ cat, index }: any) {
                     />
                 </div>
 
-                {/* Content */}
                 <div className="p-6">
                     <p className="text-xs text-gray-500">{cat.readTime}</p>
 
+                    {/* ✅ H2 for SEO */}
                     <h2 className="text-xl font-semibold text-gray-900 mt-1">
                         {cat.title}
                     </h2>
@@ -131,7 +165,7 @@ export default function BlogsPage() {
                 <div className="max-w-6xl mx-auto px-6">
 
                     <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                        Explore Categories
+                        Explore Blog Categories
                     </h2>
 
                     <div className="grid gap-8 md:grid-cols-2">

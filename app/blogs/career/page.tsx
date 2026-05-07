@@ -8,13 +8,52 @@ import {
     AccordionContent,
 } from "@/components/ui/accordion";
 import { ArrowLeft, CheckCircle } from "lucide-react";
+import type { Metadata } from "next";
 
 /* ================= SEO ================= */
-export const metadata = {
+export const metadata: Metadata = {
     title:
-        "Career Tips for Students | AI, Full Stack & Tech Career Roadmap",
+        "Career Tips for Students in Tech | AI, Full Stack & Career Roadmap | NexalyTech",
     description:
-        "Discover the best career roadmap for students in AI, Full Stack Development, and Data Science. Learn skills, build projects, and grow your tech career with expert guidance.",
+        "Explore the best career roadmap for students in AI, Full Stack Development, and Data Science. Learn in-demand skills, build projects, and grow your tech career with NexalyTech.",
+    keywords: [
+        "career tips for students",
+        "tech career roadmap",
+        "AI career guide",
+        "full stack developer roadmap",
+        "data science career",
+        "student career guidance India",
+        "NexalyTech career support",
+    ],
+    alternates: {
+        canonical: "https://www.nexalytech.com/blogs/career",
+    },
+    openGraph: {
+        title:
+            "Career Tips for Students in Tech | AI & Full Stack Roadmap",
+        description:
+            "Learn how to start and grow your career in AI, Full Stack Development, and Data Science with expert guidance.",
+        url: "https://www.nexalytech.com/blogs/career",
+        siteName: "NexalyTech",
+        images: [
+            {
+                url: "/minor1.png",
+                width: 1200,
+                height: 630,
+                alt: "Career roadmap for students in tech",
+            },
+        ],
+        locale: "en_IN",
+        type: "article",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title:
+            "Career Tips for Students | AI, Full Stack & Tech Careers",
+        description:
+            "Step-by-step roadmap to start your career in AI, Full Stack, and Data Science.",
+        images: ["/minor1.png"],
+    },
 };
 
 /* ================= PAGE ================= */
@@ -22,7 +61,7 @@ export default function CareerBlogPage() {
     return (
         <main className="w-full min-h-screen bg-white">
 
-            {/* ================= BACK ================= */}
+            {/* BACK */}
             <div className="max-w-6xl mx-auto px-6 pt-10">
                 <Link
                     href="/"
@@ -33,26 +72,25 @@ export default function CareerBlogPage() {
                 </Link>
             </div>
 
-            {/* ================= HERO ================= */}
+            {/* HERO */}
             <section className="max-w-3xl mx-auto text-center px-6 py-10">
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                    Career Tips for Students in Tech
+                    Career Tips for Students in AI, Full Stack & Tech
                 </h1>
 
                 <p className="mt-4 text-gray-600 text-lg">
-                    Confused about your tech career? Whether you're aiming for AI,
-                    Full Stack Development, or Data Science, the right roadmap,
-                    skills, and projects can make all the difference.
-                    Learn how to start, grow, and succeed in the tech industry.
+                    Start your journey in Artificial Intelligence, Full Stack Development,
+                    or Data Science with the right roadmap. Learn essential skills,
+                    build real-world projects, and grow your tech career with guidance from NexalyTech.
                 </p>
             </section>
 
-            {/* ================= IMAGE ================= */}
+            {/* IMAGE */}
             <section className="max-w-5xl mx-auto px-6">
                 <div className="relative w-full h-[350px] md:h-[420px] rounded-3xl overflow-hidden shadow-xl">
                     <Image
                         src="/minor1.png"
-                        alt="Career guidance for students"
+                        alt="Career roadmap for students in AI and full stack development"
                         fill
                         priority
                         sizes="(max-width: 768px) 100vw, 800px"
@@ -61,20 +99,20 @@ export default function CareerBlogPage() {
                 </div>
             </section>
 
-            {/* ================= ROADMAP ================= */}
+            {/* ROADMAP */}
             <section className="max-w-5xl mx-auto px-6 mt-16">
                 <h2 className="text-2xl font-bold text-gray-900 text-center">
-                    Step-by-Step Career Roadmap
+                    Step-by-Step Tech Career Roadmap
                 </h2>
 
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
                     {[
-                        "Learn fundamentals (programming, logic building)",
-                        "Choose your domain (AI, Full Stack, Data Science)",
-                        "Build real-world projects",
+                        "Learn programming fundamentals and problem-solving",
+                        "Choose your domain (AI, Full Stack, or Data Science)",
+                        "Build real-world projects to gain experience",
                         "Create a strong portfolio (GitHub + resume)",
-                        "Practice interviews and problem-solving",
-                        "Apply for internships & jobs",
+                        "Practice coding interviews and aptitude",
+                        "Apply for internships and entry-level jobs",
                     ].map((item, i) => (
                         <div key={i} className="flex items-start gap-3">
                             <CheckCircle className="text-green-600 mt-1 h-5 w-5" />
@@ -84,10 +122,10 @@ export default function CareerBlogPage() {
                 </div>
             </section>
 
-            {/* ================= WHAT WE HELP ================= */}
+            {/* HOW WE HELP */}
             <section className="max-w-5xl mx-auto px-6 mt-16">
                 <h2 className="text-2xl font-bold text-gray-900 text-center">
-                    How We Help You Grow
+                    How NexalyTech Helps You Grow
                 </h2>
 
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
@@ -95,8 +133,8 @@ export default function CareerBlogPage() {
                         "Personalized career guidance",
                         "Project-based learning approach",
                         "Mentorship from industry experts",
-                        "Resume & portfolio building",
-                        "Interview preparation",
+                        "Resume and portfolio building",
+                        "Interview preparation support",
                         "Real-world skill development",
                     ].map((item, i) => (
                         <div key={i} className="flex items-start gap-3">
@@ -107,7 +145,7 @@ export default function CareerBlogPage() {
                 </div>
             </section>
 
-            {/* ================= FAQ ================= */}
+            {/* FAQ */}
             <section className="max-w-3xl mx-auto px-6 mt-16">
                 <h2 className="text-2xl font-bold text-gray-900 text-center">
                     Frequently Asked Questions
@@ -121,27 +159,27 @@ export default function CareerBlogPage() {
                         </AccordionTrigger>
                         <AccordionContent>
                             Start with Python basics, then move into Machine Learning,
-                            Deep Learning, and explore Generative AI tools.
+                            Deep Learning, and Generative AI tools.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-2">
                         <AccordionTrigger>
-                            Which is better: AI or Full Stack?
+                            Which is better: AI or Full Stack Development?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Both are great career options. Choose AI if you love data
-                            and intelligence systems, or Full Stack if you enjoy building applications.
+                            Choose AI if you enjoy data and intelligence systems,
+                            or Full Stack if you like building web applications.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-3">
                         <AccordionTrigger>
-                            Are projects important for jobs?
+                            Are projects important for getting a job?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, projects are crucial. They demonstrate your practical skills
-                            and significantly improve your chances of getting hired.
+                            Yes, projects demonstrate practical skills and
+                            significantly improve hiring chances.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -150,24 +188,24 @@ export default function CareerBlogPage() {
                             Can beginners enter tech without experience?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, by learning fundamentals, building projects, and following
-                            a structured roadmap, beginners can successfully enter tech.
+                            Yes, by learning fundamentals and building projects,
+                            beginners can successfully enter the tech industry.
                         </AccordionContent>
                     </AccordionItem>
 
                 </Accordion>
             </section>
 
-            {/* ================= CTA ================= */}
+            {/* CTA */}
             <section className="max-w-5xl mx-auto px-6 mt-20 mb-16">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 md:p-14 rounded-3xl text-center shadow-xl">
                     <h2 className="text-2xl md:text-3xl font-bold">
-                        Need Career Guidance?
+                        Need Career Guidance in AI or Full Stack?
                     </h2>
 
                     <p className="mt-4 text-blue-100 max-w-2xl mx-auto">
-                        Get expert mentorship, build real-world skills, and start your
-                        journey towards a successful tech career today.
+                        Get expert mentorship, build real-world projects,
+                        and start your journey towards a successful tech career with NexalyTech.
                     </p>
 
                     <Link href="/services/contact">

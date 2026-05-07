@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                             id="footer-heading"
                             className="font-heading text-white text-xl font-semibold tracking-tight"
                         >
-                            Sterobyte
+                            Nexalytech
                         </h2>
 
                         <p className="mt-4 text-sm leading-relaxed text-gray-400">
@@ -108,10 +108,10 @@ const Footer: React.FC = () => {
 
                             <li>
                                 <a
-                                    href="mailto:sterobytefounder@gmail.com"
+                                    href="mailto:nakulurianilkumar66@gmail.com"
                                     className="hover:text-white transition"
                                 >
-                                    ✉️ sterobytefounder@gmail.com
+                                    nakulurianilkumar66@gmail.com
                                 </a>
                             </li>
                         </ul>
@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
 
                 {/* BOTTOM */}
                 <div className="mt-12 text-center text-xs md:text-sm text-gray-500 border-t border-gray-800 pt-6">
-                    © {new Date().getFullYear()} Sterobyte. All rights reserved.
+                    © {new Date().getFullYear()} NexalyTech. All rights reserved.
                 </div>
 
             </div>

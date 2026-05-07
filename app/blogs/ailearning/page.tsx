@@ -10,16 +10,51 @@ import Link from "next/link";
 
 /* ================= SEO ================= */
 export const metadata = {
-    title: "AI Learning Guide for Beginners | Python, ML, DL & Generative AI",
+    title:
+        "AI Learning Guide for Beginners | Python, ML, DL & Generative AI | NexalyTech",
     description:
-        "Complete AI learning roadmap for beginners. Learn Python, Machine Learning, Deep Learning, and Generative AI step-by-step with practical guidance.",
+        "Complete AI learning roadmap by NexalyTech. Learn Python, Machine Learning, Deep Learning, and Generative AI step-by-step with real-world guidance.",
+    keywords: [
+        "AI learning guide",
+        "learn AI for beginners",
+        "Python machine learning roadmap",
+        "deep learning tutorial",
+        "generative AI guide",
+        "NexalyTech AI course",
+    ],
+    alternates: {
+        canonical: "https://www.nexalytech.com/blogs/ai-learning-guide",
+    },
+    openGraph: {
+        title: "AI Learning Guide | NexalyTech",
+        description:
+            "Start learning AI from basics to advanced with NexalyTech.",
+        url: "https://www.nexalytech.com/blogs/ai-learning-guide",
+        siteName: "NexalyTech",
+        images: [
+            {
+                url: "/course2.png",
+                width: 1200,
+                height: 630,
+                alt: "AI Learning Roadmap",
+            },
+        ],
+        type: "article",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "AI Learning Guide | NexalyTech",
+        description:
+            "Step-by-step AI roadmap covering Python, ML, DL, and Generative AI.",
+        images: ["/course2.png"],
+    },
 };
 
 export default function AILearningGuidePage() {
     return (
         <main className="w-full min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 px-6 md:px-12 py-14">
 
-            {/* ================= BACK TO HOME ================= */}
+            {/* ================= BACK ================= */}
             <div className="max-w-6xl mx-auto mb-6">
                 <Link href="/">
                     <Button className="bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-lg">
@@ -30,14 +65,14 @@ export default function AILearningGuidePage() {
 
             {/* ================= INTRO ================= */}
             <section className="max-w-3xl mx-auto text-center">
+                {/* ✅ SEO H1 */}
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-                    AI Learning Guide for Beginners
+                    AI Learning Guide for Beginners – Python, ML, DL & Generative AI
                 </h1>
 
                 <p className="mt-4 text-gray-600 text-lg">
-                    Artificial Intelligence is transforming every industry. This guide helps
-                    you start from basics and move step-by-step into advanced AI concepts
-                    including Machine Learning, Deep Learning, and Generative AI.
+                    This NexalyTech guide helps you start Artificial Intelligence from basics
+                    and move step-by-step into Machine Learning, Deep Learning, and Generative AI.
                 </p>
             </section>
 
@@ -45,56 +80,56 @@ export default function AILearningGuidePage() {
             <section className="max-w-4xl mx-auto mt-10 flex justify-center">
                 <Image
                     src="/course2.png"
-                    alt="AI learning roadmap"
+                    alt="AI learning roadmap for beginners including Python machine learning and deep learning"
                     width={700}
                     height={450}
-                    className="rounded-3xl shadow-xl"
-                    style={{ width: "100%", height: "auto" }}
+                    priority
+                    loading="eager"
+                    className="rounded-3xl shadow-xl w-full h-auto"
                 />
             </section>
 
-            {/* ================= LEARNING STEPS ================= */}
+            {/* ================= STEPS ================= */}
             <section className="max-w-5xl mx-auto mt-16">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">
-                    Step-by-Step AI Learning Path
+                    Step-by-Step AI Learning Roadmap
                 </h2>
 
                 <div className="mt-10 grid md:grid-cols-2 gap-8">
 
                     <div className="bg-white p-6 rounded-2xl shadow-md">
                         <h3 className="font-semibold text-lg text-blue-600">
-                            1. Learn Python Basics
+                            Learn Python for AI
                         </h3>
                         <p className="mt-2 text-gray-600">
-                            Start with Python programming including variables, loops, functions,
-                            and basic problem solving.
+                            Start with Python basics including variables, loops, and functions.
                         </p>
                     </div>
 
                     <div className="bg-white p-6 rounded-2xl shadow-md">
                         <h3 className="font-semibold text-lg text-purple-600">
-                            2. Understand Machine Learning
+                            Machine Learning Fundamentals
                         </h3>
                         <p className="mt-2 text-gray-600">
-                            Learn core ML concepts like regression, classification, and model training.
+                            Learn regression, classification, and model training techniques.
                         </p>
                     </div>
 
                     <div className="bg-white p-6 rounded-2xl shadow-md">
                         <h3 className="font-semibold text-lg text-indigo-600">
-                            3. Explore Deep Learning
+                            Deep Learning Concepts
                         </h3>
                         <p className="mt-2 text-gray-600">
-                            Study neural networks, CNNs, and how deep learning powers AI systems.
+                            Understand neural networks and deep learning architectures.
                         </p>
                     </div>
 
                     <div className="bg-white p-6 rounded-2xl shadow-md">
                         <h3 className="font-semibold text-lg text-green-600">
-                            4. Learn Generative AI
+                            Generative AI & Tools
                         </h3>
                         <p className="mt-2 text-gray-600">
-                            Work with modern tools like ChatGPT, AI APIs, and build smart applications.
+                            Work with ChatGPT, APIs, and AI automation tools.
                         </p>
                     </div>
 
@@ -104,47 +139,37 @@ export default function AILearningGuidePage() {
             {/* ================= FAQ ================= */}
             <section className="max-w-3xl mx-auto mt-16">
                 <h2 className="text-2xl font-bold text-gray-900 text-center">
-                    Frequently Asked Questions
+                    AI Learning FAQs
                 </h2>
 
                 <Accordion type="single" collapsible className="mt-6">
-
-                    <AccordionItem value="item-1">
-                        <AccordionTrigger>
-                            Can I learn AI without coding experience?
-                        </AccordionTrigger>
+                    <AccordionItem value="1">
+                        <AccordionTrigger>Can I learn AI without coding?</AccordionTrigger>
                         <AccordionContent>
-                            Yes, you can start from Python basics and gradually move into AI concepts.
+                            Yes, start with Python basics and gradually learn AI.
                         </AccordionContent>
                     </AccordionItem>
 
-                    <AccordionItem value="item-2">
-                        <AccordionTrigger>
-                            How long does it take to learn AI?
-                        </AccordionTrigger>
+                    <AccordionItem value="2">
+                        <AccordionTrigger>How long to learn AI?</AccordionTrigger>
                         <AccordionContent>
-                            With consistent learning, you can build strong basics in 1–3 months.
+                            You can learn basics in 1–3 months with consistent practice.
                         </AccordionContent>
                     </AccordionItem>
 
-                    <AccordionItem value="item-3">
-                        <AccordionTrigger>
-                            Do I need mathematics for AI?
-                        </AccordionTrigger>
+                    <AccordionItem value="3">
+                        <AccordionTrigger>Do I need math?</AccordionTrigger>
                         <AccordionContent>
-                            Basic math like algebra and statistics is helpful, but you can start without deep knowledge.
+                            Basic algebra and statistics help, but you can start without deep math.
                         </AccordionContent>
                     </AccordionItem>
 
-                    <AccordionItem value="item-4">
-                        <AccordionTrigger>
-                            Can I build projects after learning AI?
-                        </AccordionTrigger>
+                    <AccordionItem value="4">
+                        <AccordionTrigger>Can I build AI projects?</AccordionTrigger>
                         <AccordionContent>
-                            Yes, you can build real-world AI projects once you understand the fundamentals.
+                            Yes, once you understand fundamentals, you can build real-world projects.
                         </AccordionContent>
                     </AccordionItem>
-
                 </Accordion>
             </section>
 
@@ -152,11 +177,11 @@ export default function AILearningGuidePage() {
             <section className="max-w-4xl mx-auto mt-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 rounded-3xl text-center shadow-xl">
 
                 <h2 className="text-2xl md:text-3xl font-bold">
-                    Start Learning AI Today
+                    Start Learning AI with NexalyTech
                 </h2>
 
                 <p className="mt-4 text-blue-100">
-                    Join our AI course and get step-by-step guidance from basics to advanced concepts.
+                    Get structured guidance and hands-on projects to master AI faster.
                 </p>
 
                 <div className="flex flex-col md:flex-row justify-center gap-4 mt-6">
@@ -167,7 +192,6 @@ export default function AILearningGuidePage() {
                         </Button>
                     </Link>
 
-                    {/* BACK HOME BUTTON (BOTTOM) */}
                     <Link href="/">
                         <Button className="bg-transparent border border-white text-white hover:bg-white hover:text-blue-600 px-6 py-5 text-lg">
                             Back to Home
@@ -177,6 +201,34 @@ export default function AILearningGuidePage() {
                 </div>
             </section>
 
+            {/* ✅ STRUCTURED DATA (VERY IMPORTANT FOR SEO) */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        mainEntity: [
+                            {
+                                "@type": "Question",
+                                name: "Can I learn AI without coding?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Yes, you can start with Python basics and gradually learn AI concepts.",
+                                },
+                            },
+                            {
+                                "@type": "Question",
+                                name: "How long does it take to learn AI?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "You can learn basics in 1–3 months with consistent practice.",
+                                },
+                            },
+                        ],
+                    }),
+                }}
+            />
         </main>
     );
 }

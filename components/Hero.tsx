@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 
 const Hero: React.FC = () => {
     return (
@@ -21,9 +23,11 @@ const Hero: React.FC = () => {
                         research, and AI learning.
                     </p>
 
-                    <Button className="mt-6 bg-white text-blue-700 hover:bg-gray-100 shadow-md hover:scale-105 transition">
-                        Get Started
-                    </Button>
+                    <Link href="/services/contact">
+                        <Button className="mt-6 bg-white text-blue-700 hover:bg-gray-100 shadow-md hover:scale-105 transition">
+                            Get Started
+                        </Button>
+                    </Link>
                 </div>
 
                 {/* RIGHT IMAGE */}

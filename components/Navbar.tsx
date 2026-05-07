@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 
                 {/* LOGO */}
                 <Link href="/" className="text-xl md:text-2xl font-semibold tracking-tight">
-                    Sterobyte
+                    Nexalytech
                 </Link>
 
                 {/* ================= DESKTOP NAV ================= */}
@@ -72,9 +72,11 @@ const Navbar: React.FC = () => {
 
                 {/* DESKTOP BUTTON */}
                 <div className="hidden md:block">
-                    <Button className="bg-white text-blue-700 hover:bg-gray-100 px-6 py-2 text-sm md:text-base rounded-lg">
-                        Get Started
-                    </Button>
+                    <Link href="/services/contact">
+                        <Button className="bg-white text-blue-700 hover:bg-gray-100 px-6 py-2 text-sm md:text-base rounded-lg">
+                            Get Started
+                        </Button>
+                    </Link>
                 </div>
 
                 {/* MOBILE TOGGLE */}

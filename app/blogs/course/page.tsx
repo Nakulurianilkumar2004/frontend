@@ -8,13 +8,50 @@ import {
     AccordionContent,
 } from "@/components/ui/accordion";
 import { ArrowLeft, CheckCircle } from "lucide-react";
+import type { Metadata } from "next";
 
 /* ================= SEO ================= */
-export const metadata = {
+export const metadata: Metadata = {
     title:
-        "1 Month AI Course | Learn Python, Machine Learning, Deep Learning & Generative AI",
+        "1 Month AI Course | Learn Python, Machine Learning & Generative AI | NexalyTech",
     description:
-        "Join our 1-month AI course and master Python, Machine Learning, Deep Learning, and Generative AI with hands-on projects and real-world guidance.",
+        "Join NexalyTech’s 1-month AI course and master Python, Machine Learning, Deep Learning, and Generative AI with real-world projects and mentorship.",
+    keywords: [
+        "AI course India",
+        "1 month AI course",
+        "learn machine learning",
+        "python for AI beginners",
+        "deep learning course",
+        "generative AI training",
+        "NexalyTech AI course",
+    ],
+    alternates: {
+        canonical: "https://www.nexalytech.com/blogs/course",
+    },
+    openGraph: {
+        title: "1 Month AI Course | Python, ML & Generative AI",
+        description:
+            "Master AI in 1 month with hands-on projects and expert mentorship.",
+        url: "https://www.nexalytech.com/blogs/course",
+        siteName: "NexalyTech",
+        images: [
+            {
+                url: "/course1.png",
+                width: 1200,
+                height: 630,
+                alt: "AI course learning roadmap",
+            },
+        ],
+        locale: "en_IN",
+        type: "article",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "1 Month AI Course | Learn AI Fast",
+        description:
+            "Learn Python, ML, DL, and Generative AI with real-world projects.",
+        images: ["/course1.png"],
+    },
 };
 
 /* ================= PAGE ================= */
@@ -22,7 +59,7 @@ export default function CourseBlogPage() {
     return (
         <main className="w-full min-h-screen bg-white">
 
-            {/* ================= BACK ================= */}
+            {/* BACK */}
             <div className="max-w-6xl mx-auto px-6 pt-10">
                 <Link
                     href="/blogs"
@@ -33,26 +70,25 @@ export default function CourseBlogPage() {
                 </Link>
             </div>
 
-            {/* ================= HERO ================= */}
+            {/* HERO */}
             <section className="max-w-3xl mx-auto text-center px-6 py-10">
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                    Learn AI from Scratch in 1 Month
+                    Learn Artificial Intelligence in 1 Month
                 </h1>
 
                 <p className="mt-4 text-gray-600 text-lg">
-                    Kickstart your journey into Artificial Intelligence with our
-                    structured 1-month course. Learn Python, Machine Learning,
-                    Deep Learning, and Generative AI with real-world examples,
-                    guided mentorship, and hands-on projects.
+                    Kickstart your career in AI with NexalyTech’s structured course.
+                    Learn Python, Machine Learning, Deep Learning, and Generative AI
+                    with real-world projects, mentorship, and practical implementation.
                 </p>
             </section>
 
-            {/* ================= IMAGE ================= */}
+            {/* HERO IMAGE */}
             <section className="max-w-5xl mx-auto px-6">
                 <div className="relative w-full h-[350px] md:h-[420px] rounded-3xl overflow-hidden shadow-xl">
                     <Image
                         src="/course1.png"
-                        alt="AI course learning"
+                        alt="AI course training with Python machine learning and generative AI"
                         fill
                         priority
                         sizes="(max-width: 768px) 100vw, 800px"
@@ -61,20 +97,20 @@ export default function CourseBlogPage() {
                 </div>
             </section>
 
-            {/* ================= COURSE HIGHLIGHTS ================= */}
+            {/* HIGHLIGHTS */}
             <section className="max-w-5xl mx-auto px-6 mt-16">
                 <h2 className="text-2xl font-bold text-gray-900 text-center">
-                    What You Will Learn
+                    Skills You Will Gain in This AI Course
                 </h2>
 
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
                     {[
-                        "Python programming from basics",
-                        "Core Machine Learning concepts",
-                        "Deep Learning fundamentals",
-                        "Generative AI tools & applications",
-                        "Hands-on real-world projects",
-                        "Industry-level guidance & mentorship",
+                        "Python programming for AI development",
+                        "Machine Learning algorithms and model building",
+                        "Deep Learning concepts and neural networks",
+                        "Generative AI tools like ChatGPT and APIs",
+                        "Hands-on real-world AI projects",
+                        "Industry mentorship and career guidance",
                     ].map((item, i) => (
                         <div key={i} className="flex items-start gap-3">
                             <CheckCircle className="text-green-600 mt-1 h-5 w-5" />
@@ -84,106 +120,87 @@ export default function CourseBlogPage() {
                 </div>
             </section>
 
-            {/* ================= CURRICULUM ================= */}
+            {/* CURRICULUM */}
             <section className="max-w-5xl mx-auto px-6 mt-16">
                 <h2 className="text-2xl font-bold text-gray-900 text-center">
-                    Course Curriculum (4 Weeks Plan)
+                    4-Week AI Course Curriculum
                 </h2>
 
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
 
-                    <div className="p-5 border rounded-xl">
-                        <h3 className="font-semibold text-lg">Week 1</h3>
-                        <p className="text-gray-600 mt-2">
-                            Python basics, data structures, and programming fundamentals.
-                        </p>
-                    </div>
-
-                    <div className="p-5 border rounded-xl">
-                        <h3 className="font-semibold text-lg">Week 2</h3>
-                        <p className="text-gray-600 mt-2">
-                            Machine Learning concepts, algorithms, and model building.
-                        </p>
-                    </div>
-
-                    <div className="p-5 border rounded-xl">
-                        <h3 className="font-semibold text-lg">Week 3</h3>
-                        <p className="text-gray-600 mt-2">
-                            Deep Learning basics, neural networks, and practical use cases.
-                        </p>
-                    </div>
-
-                    <div className="p-5 border rounded-xl">
-                        <h3 className="font-semibold text-lg">Week 4</h3>
-                        <p className="text-gray-600 mt-2">
-                            Generative AI, project development, and real-world applications.
-                        </p>
-                    </div>
+                    {[
+                        ["Week 1", "Python basics, logic building, and data structures"],
+                        ["Week 2", "Machine Learning algorithms and model training"],
+                        ["Week 3", "Deep Learning, neural networks, and AI systems"],
+                        ["Week 4", "Generative AI, APIs, and real-world projects"],
+                    ].map(([title, desc], i) => (
+                        <div key={i} className="p-5 border rounded-xl hover:shadow-md transition">
+                            <h3 className="font-semibold text-lg">{title}</h3>
+                            <p className="text-gray-600 mt-2">{desc}</p>
+                        </div>
+                    ))}
 
                 </div>
             </section>
 
-            {/* ================= FAQ ================= */}
+            {/* FAQ */}
             <section className="max-w-3xl mx-auto px-6 mt-16">
                 <h2 className="text-2xl font-bold text-gray-900 text-center">
-                    Frequently Asked Questions
+                    AI Course FAQs
                 </h2>
 
                 <Accordion type="single" collapsible className="mt-6">
 
                     <AccordionItem value="item-1">
                         <AccordionTrigger>
-                            Is this course beginner-friendly?
+                            Is this AI course suitable for beginners?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, we start from Python basics and gradually move into
-                            advanced AI topics step-by-step.
+                            Yes, the course starts from Python basics and gradually
+                            progresses to advanced AI topics.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-2">
                         <AccordionTrigger>
-                            Do I need prior coding experience?
+                            Do I need prior coding knowledge?
                         </AccordionTrigger>
                         <AccordionContent>
-                            No prior experience is required. This course is designed
-                            for beginners as well as students.
+                            No prior experience is required. This course is beginner-friendly.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-3">
                         <AccordionTrigger>
-                            Will I build projects during the course?
+                            Will I build real-world projects?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, you will work on real-world AI projects to gain
-                            practical experience and build your portfolio.
+                            Yes, you will work on hands-on AI projects to build your portfolio.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-4">
                         <AccordionTrigger>
-                            Will I get mentorship support?
+                            Is mentorship included in the course?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, we provide continuous mentorship and guidance
-                            throughout the course duration.
+                            Yes, we provide continuous mentorship and career guidance.
                         </AccordionContent>
                     </AccordionItem>
 
                 </Accordion>
             </section>
 
-            {/* ================= CTA ================= */}
+            {/* CTA */}
             <section className="max-w-5xl mx-auto px-6 mt-20 mb-16">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 md:p-14 rounded-3xl text-center shadow-xl">
                     <h2 className="text-2xl md:text-3xl font-bold">
-                        Start Your AI Journey Today
+                        Start Your AI Career with NexalyTech
                     </h2>
 
                     <p className="mt-4 text-blue-100 max-w-2xl mx-auto">
-                        Build in-demand AI skills and stand out in your career.
-                        Join our 1-month course and start building real-world projects today.
+                        Learn in-demand AI skills, build projects, and get job-ready.
+                        Join our 1-month intensive AI course today.
                     </p>
 
                     <Link href="/services/contact">

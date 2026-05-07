@@ -3,7 +3,6 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-// ✅ PRIMARY FONT (BODY) → preload ON
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -11,7 +10,6 @@ const inter = Inter({
   preload: true,
 });
 
-// ✅ SECONDARY FONT (HEADINGS) → preload OFF
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -20,13 +18,48 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://www.nexalytech.com"),
+
   title: {
-    default: "Sterobyte",
-    template: "%s | Sterobyte",
+    default: "NexalyTech",
+    template: "%s | NexalyTech",
   },
+
   description:
-    "Sterobyte helps students with freelancing opportunities, AI courses, research paper guidance, and academic project support.",
+    "NexalyTech offers AI training, freelancing opportunities, research paper guidance, and support for minor & major academic projects.",
+
+  keywords: [
+    "NexalyTech",
+    "AI courses",
+    "freelancing opportunities",
+    "research paper writing",
+    "minor projects",
+    "major projects",
+    "student academic support",
+    "AI training India"
+  ],
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: "NexalyTech",
+    description:
+      "AI Training, Freelancing Opportunities, Research Guidance & Academic Project Support.",
+    url: "https://www.nexalytech.com",
+    siteName: "NexalyTech",
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "NexalyTech",
+    description:
+      "AI Training, Freelancing, Research Guidance & Academic Projects.",
+  },
 };
 
 export default function RootLayout({
@@ -37,7 +70,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        // ✅ FIX: Apply Inter directly so preload is actually used
         className={`${inter.className} ${jakarta.variable} bg-white text-gray-900 antialiased`}
       >
         {children}

@@ -1,42 +1,76 @@
 "use client";
 
+import Head from "next/head";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Code, Brain, Search } from "lucide-react";
 import { motion } from "framer-motion";
-import Navbar from "@/components/Navbar"; // ✅ IMPORT
+import Navbar from "@/components/Navbar";
 
-export default function FreelancingClient() {
+export default function FreelancingPage() {
     return (
         <>
-            {/* ✅ NAVBAR */}
+            {/* ================= SEO ================= */}
+            <Head>
+                <title>
+                    Freelancing Services for AI, Full Stack & SEO | NexalyTech
+                </title>
+
+                <meta
+                    name="description"
+                    content="NexalyTech offers expert freelancing services in AI development, full stack web development, and SEO optimization. Build scalable, high-performance applications for your business."
+                />
+
+                <meta
+                    name="keywords"
+                    content="freelancing services India, AI development, full stack development, SEO services, web development company, hire developers India"
+                />
+
+                <meta name="robots" content="index, follow" />
+
+                {/* Open Graph (for social + SEO boost) */}
+                <meta property="og:title" content="Freelancing Services | NexalyTech" />
+                <meta
+                    property="og:description"
+                    content="AI, Full Stack & SEO freelancing services for scalable digital solutions."
+                />
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:url"
+                    content="https://www.nexalytech.com/services/freelancing"
+                />
+
+                {/* Canonical */}
+                <link
+                    rel="canonical"
+                    href="https://www.nexalytech.com/services/freelancing"
+                />
+            </Head>
+
             <Navbar />
 
-            {/* ✅ MAIN WITH TOP PADDING */}
             <main className="w-full min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 pt-24 px-6 md:px-12 py-12">
 
-                {/* ================= HERO SECTION ================= */}
+                {/* ================= HERO ================= */}
                 <section className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-                    {/* LEFT */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
                         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                            Freelancing Project Development <br />
-                            <span className="text-blue-600">AI • Full Stack • SEO</span>
+                            Freelancing Services for AI, Full Stack & SEO Development
                         </h1>
 
                         <p className="mt-6 text-lg text-gray-600 max-w-xl">
-                            We collaborate closely with clients to understand their needs and
-                            deliver high-quality, scalable, and performance-driven applications
-                            using modern technologies and AI-powered solutions.
+                            NexalyTech provides professional freelancing services including AI development,
+                            full stack web applications, and SEO optimization. We build scalable,
+                            high-performance, and production-ready solutions for startups,
+                            businesses, and students.
                         </p>
                     </motion.div>
 
-                    {/* RIGHT IMAGE */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -45,24 +79,26 @@ export default function FreelancingClient() {
                     >
                         <Image
                             src="/freelancing1.png"
-                            alt="Freelancing development services illustration"
+                            alt="AI and Full Stack freelancing services"
                             width={520}
                             height={420}
                             priority
-                            className="rounded-3xl shadow-2xl"
-                            style={{ width: "100%", height: "auto" }}
+                            loading="eager"
+                            className="rounded-3xl shadow-2xl w-full h-auto"
                         />
                     </motion.div>
                 </section>
 
                 {/* ================= SERVICES ================= */}
                 <section className="max-w-6xl mx-auto mt-24 text-center">
+
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                        Our Core Services
+                        AI, Full Stack & SEO Freelancing Services
                     </h2>
 
                     <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-                        We provide complete development solutions tailored to your business needs.
+                        Complete freelancing solutions including web development,
+                        artificial intelligence, and search engine optimization.
                     </p>
 
                     <div className="mt-12 grid md:grid-cols-3 gap-8">
@@ -74,7 +110,8 @@ export default function FreelancingClient() {
                                     Full Stack Development
                                 </h3>
                                 <p className="mt-3 text-gray-600">
-                                    End-to-end web applications using modern frameworks and scalable architecture.
+                                    Build scalable web applications using React, Next.js,
+                                    and modern backend technologies.
                                 </p>
                             </CardContent>
                         </Card>
@@ -83,10 +120,10 @@ export default function FreelancingClient() {
                             <CardContent className="p-8 text-center">
                                 <Brain className="mx-auto w-12 h-12 text-purple-600" />
                                 <h3 className="mt-5 text-xl font-semibold">
-                                    AI-Based Solutions
+                                    AI Development Services
                                 </h3>
                                 <p className="mt-3 text-gray-600">
-                                    Smart applications with AI integration including automation and intelligent systems.
+                                    AI-powered automation, chatbots, and intelligent systems.
                                 </p>
                             </CardContent>
                         </Card>
@@ -95,10 +132,10 @@ export default function FreelancingClient() {
                             <CardContent className="p-8 text-center">
                                 <Search className="mx-auto w-12 h-12 text-green-600" />
                                 <h3 className="mt-5 text-xl font-semibold">
-                                    SEO Optimization
+                                    SEO Optimization Services
                                 </h3>
                                 <p className="mt-3 text-gray-600">
-                                    Improve visibility with optimized performance and search engine strategies.
+                                    Improve rankings, performance, and visibility on search engines.
                                 </p>
                             </CardContent>
                         </Card>
@@ -106,52 +143,51 @@ export default function FreelancingClient() {
                     </div>
                 </section>
 
-                {/* ================= PROCESS SECTION ================= */}
+                {/* ================= PROCESS ================= */}
                 <section className="max-w-6xl mx-auto mt-28 text-center">
+
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                        How We Work
+                        Freelancing Development Process
                     </h2>
 
                     <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-                        Our process ensures clear communication, proper planning, and high-quality delivery.
+                        Our structured workflow ensures high-quality project delivery
+                        and client satisfaction.
                     </p>
 
                     <div className="mt-12 grid md:grid-cols-3 gap-8 text-left">
 
-                        <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+                        <div className="bg-white p-6 rounded-2xl shadow-md">
                             <h3 className="text-xl font-semibold text-blue-600">
-                                1. Requirement Understanding
+                                Requirement Analysis
                             </h3>
                             <p className="mt-3 text-gray-600">
-                                We carefully analyze and understand the client’s requirements,
-                                goals, and project expectations.
+                                Understanding business needs, goals, and project requirements.
                             </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+                        <div className="bg-white p-6 rounded-2xl shadow-md">
                             <h3 className="text-xl font-semibold text-purple-600">
-                                2. Research & Planning
+                                Planning & Strategy
                             </h3>
                             <p className="mt-3 text-gray-600">
-                                We perform detailed research and create a structured plan
-                                to ensure the best solution approach.
+                                Creating architecture and roadmap for efficient development.
                             </p>
                         </div>
 
-                        <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+                        <div className="bg-white p-6 rounded-2xl shadow-md">
                             <h3 className="text-xl font-semibold text-green-600">
-                                3. Development & Communication
+                                Development & Delivery
                             </h3>
                             <p className="mt-3 text-gray-600">
-                                We build the project with continuous updates and communication
-                                to ensure alignment with client expectations.
+                                Building scalable and optimized applications.
                             </p>
                         </div>
 
                     </div>
                 </section>
 
-                {/* ================= CTA SECTION ================= */}
+                {/* ================= CTA ================= */}
                 <section className="max-w-7xl mx-auto mt-28 grid md:grid-cols-2 gap-12 items-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 md:p-14 rounded-3xl shadow-xl">
 
                     <motion.div
@@ -162,22 +198,22 @@ export default function FreelancingClient() {
                     >
                         <Image
                             src="/freelancing2.png"
-                            alt="Client discussion"
+                            alt="Freelancing client discussion"
                             width={480}
                             height={360}
-                            className="rounded-2xl shadow-lg"
-                            style={{ width: "100%", height: "auto" }}
+                            loading="lazy"
+                            className="rounded-2xl shadow-lg w-full h-auto"
                         />
                     </motion.div>
 
                     <div>
                         <h2 className="text-3xl md:text-4xl font-bold">
-                            Let’s Work Together
+                            Start Your Freelancing Project Today
                         </h2>
 
                         <p className="mt-5 text-blue-100 max-w-lg">
-                            Share your project idea and we will help you build a powerful,
-                            scalable, and production-ready solution.
+                            Work with NexalyTech to build scalable, AI-powered,
+                            and SEO-optimized solutions for your business.
                         </p>
                     </div>
                 </section>

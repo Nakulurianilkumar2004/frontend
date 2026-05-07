@@ -47,11 +47,11 @@ const Contact: React.FC = () => {
                             </a>
 
                             <a
-                                href="mailto:sterobyte@gmail.com"
+                                href="mailto:nakulurianilkumar66@gmail.com"
                                 className="flex items-center justify-center md:justify-start gap-2 hover:text-blue-600 transition"
                             >
                                 <FiMail size={18} />
-                                <span>sterobytefounder@gmail.com</span>
+                                <span>nakulurianilkumar66@gmail.com</span>
                             </a>
 
                         </div>
@@ -110,9 +110,9 @@ const Contact: React.FC = () => {
 
                             <Image
                                 src="/contact.png"
-                                alt="sterobyte support team for freelancing and AI guidance"
+                                alt="Nexalytech support team for freelancing and AI guidance"
                                 fill
-                                loading="lazy" // ✅ better for performance
+                                priority
                                 sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 340px"
                                 className="object-cover rounded-3xl shadow-xl group-hover:scale-105 transition duration-500"
                             />
