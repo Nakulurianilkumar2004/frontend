@@ -7,28 +7,36 @@ import {
     AccordionTrigger,
     AccordionContent,
 } from "@/components/ui/accordion";
+import type { Metadata } from "next";
 
 /* ================= SEO ================= */
-export const metadata = {
+export const metadata: Metadata = {
     metadataBase: new URL("https://www.nexalytech.com"),
-    title: "Freelancing Guide for Clients | AI, Full Stack & SEO Development - NexalyTech",
+
+    title:
+        "Freelancing Project Guide | AI, Full Stack & SEO Development Process | NexalyTech",
+
     description:
-        "Learn how NexalyTech delivers freelancing projects using AI, Full Stack development, and SEO optimization. Complete guide from idea to deployment.",
+        "Step-by-step freelancing project development guide using AI, Full Stack development, and SEO optimization. Learn how NexalyTech builds scalable digital solutions from idea to deployment.",
+
     keywords: [
-        "freelancing services",
-        "AI development",
-        "full stack development",
-        "SEO optimization",
-        "project development guide",
-        "hire developers India",
+        "freelancing project guide",
+        "AI development process",
+        "full stack project workflow",
+        "SEO optimized web development",
+        "Next.js development process",
+        "software development lifecycle",
+        "project deployment guide",
     ],
+
     alternates: {
-        canonical: "/blogs/freelancing-guide",
+        canonical: "https://www.nexalytech.com/blogs/freelancing-guide",
     },
+
     openGraph: {
-        title: "Freelancing Project Guide | NexalyTech",
+        title: "Freelancing Project Development Guide | NexalyTech",
         description:
-            "Step-by-step freelancing project development process using AI, Full Stack & SEO.",
+            "Learn the complete step-by-step process of building AI-powered, SEO-optimized full stack applications.",
         url: "https://www.nexalytech.com/blogs/freelancing-guide",
         siteName: "NexalyTech",
         images: [
@@ -36,16 +44,17 @@ export const metadata = {
                 url: "/freelancing2.png",
                 width: 1200,
                 height: 630,
-                alt: "Freelancing project workflow",
+                alt: "Freelancing project development workflow",
             },
         ],
         type: "article",
     },
+
     twitter: {
         card: "summary_large_image",
-        title: "Freelancing Guide | NexalyTech",
+        title: "Freelancing Project Guide | NexalyTech",
         description:
-            "Complete freelancing development process using AI & Full Stack.",
+            "Complete development workflow for AI + Full Stack + SEO projects.",
         images: ["/freelancing2.png"],
     },
 };
@@ -56,7 +65,7 @@ const jsonLd = {
     "@type": "Article",
     headline: "Freelancing Project Development Guide",
     description:
-        "Step-by-step guide explaining how NexalyTech builds freelancing projects using AI, Full Stack and SEO.",
+        "Step-by-step guide explaining how NexalyTech builds freelancing projects using AI, Full Stack development and SEO optimization.",
     author: {
         "@type": "Organization",
         name: "NexalyTech",
@@ -65,21 +74,22 @@ const jsonLd = {
         "@type": "Organization",
         name: "NexalyTech",
     },
+    mainEntityOfPage: "https://www.nexalytech.com/blogs/freelancing-guide",
 };
 
 /* ================= PAGE ================= */
 export default function FreelanceGuidePage() {
     return (
-        <main className="w-full min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 px-6 md:px-12 py-14">
+        <main className="w-full min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100">
 
-            {/* SEO JSON-LD */}
+            {/* JSON-LD */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
 
             {/* ================= HEADER ================= */}
-            <header className="max-w-6xl mx-auto mb-8">
+            <header className="max-w-6xl mx-auto px-6 pt-6">
                 <Link href="/">
                     <Button className="bg-gray-200 text-gray-800 hover:bg-gray-300 px-4 py-2 rounded-lg">
                         ← Back to Home
@@ -87,25 +97,26 @@ export default function FreelanceGuidePage() {
                 </Link>
             </header>
 
-            {/* ================= HERO ================= */}
-            <section className="max-w-3xl mx-auto text-center">
+            {/* ================= HERO (SEO H1) ================= */}
+            <section className="max-w-3xl mx-auto text-center px-6 py-12">
                 <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
                     Freelancing Project Development Guide
                 </h1>
 
                 <p className="mt-5 text-gray-600 text-lg">
-                    Discover how NexalyTech transforms your ideas into scalable,
-                    AI-powered, and SEO-optimized digital products using modern
-                    full stack technologies.
+                    Learn how modern digital products are built using{" "}
+                    <strong>AI integration</strong>,{" "}
+                    <strong>Full Stack Development</strong>, and{" "}
+                    <strong>SEO optimization techniques</strong> from idea to production.
                 </p>
             </section>
 
             {/* ================= IMAGE ================= */}
-            <section className="max-w-5xl mx-auto mt-12">
+            <section className="max-w-5xl mx-auto px-6">
                 <div className="relative w-full h-[300px] md:h-[450px] rounded-3xl overflow-hidden shadow-2xl">
                     <Image
                         src="/freelancing2.png"
-                        alt="Freelancing project workflow and development process"
+                        alt="Freelancing development workflow AI full stack SEO process"
                         fill
                         priority
                         sizes="(max-width: 768px) 100vw, 1000px"
@@ -114,46 +125,41 @@ export default function FreelanceGuidePage() {
                 </div>
             </section>
 
-            {/* ================= PROCESS ================= */}
-            <section className="max-w-5xl mx-auto mt-20">
+            {/* ================= PROCESS (H2 SEO SECTION) ================= */}
+            <section className="max-w-5xl mx-auto mt-20 px-6">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">
-                    Our Freelancing Development Process
+                    Freelancing Development Process (Step-by-Step)
                 </h2>
 
                 <div className="mt-12 grid md:grid-cols-2 gap-8">
 
                     {[
                         {
-                            title: "1. Requirement Analysis",
-                            color: "text-blue-600",
-                            desc: "We deeply understand your idea, goals, and business requirements.",
+                            title: "Requirement Analysis",
+                            desc: "Understanding client goals, business needs, and project scope.",
                         },
                         {
-                            title: "2. Planning & Strategy",
-                            color: "text-purple-600",
-                            desc: "We design architecture and choose the best tech stack.",
+                            title: "System Design",
+                            desc: "Planning architecture, UI/UX design, and technology stack selection.",
                         },
                         {
-                            title: "3. Development",
-                            color: "text-indigo-600",
-                            desc: "We build scalable applications using modern frameworks and AI.",
+                            title: "Development Phase",
+                            desc: "Building scalable applications using React, Next.js, Node.js, and AI tools.",
                         },
                         {
-                            title: "4. Testing & SEO Optimization",
-                            color: "text-green-600",
-                            desc: "We optimize performance, speed, and search engine visibility.",
+                            title: "Testing & SEO Optimization",
+                            desc: "Performance tuning, bug fixing, and search engine optimization.",
                         },
                         {
-                            title: "5. Delivery & Support",
-                            color: "text-orange-600",
-                            desc: "We deliver your product and provide continuous support.",
+                            title: "Deployment & Delivery",
+                            desc: "Launching project on production with full optimization.",
                         },
                     ].map((step, i) => (
                         <div
                             key={i}
                             className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition"
                         >
-                            <h3 className={`font-semibold text-lg ${step.color}`}>
+                            <h3 className="font-semibold text-lg text-blue-600">
                                 {step.title}
                             </h3>
                             <p className="mt-2 text-gray-600">{step.desc}</p>
@@ -164,7 +170,7 @@ export default function FreelanceGuidePage() {
             </section>
 
             {/* ================= FAQ ================= */}
-            <section className="max-w-3xl mx-auto mt-20">
+            <section className="max-w-3xl mx-auto mt-20 px-6">
                 <h2 className="text-2xl font-bold text-gray-900 text-center">
                     Frequently Asked Questions
                 </h2>
@@ -173,37 +179,28 @@ export default function FreelanceGuidePage() {
 
                     <AccordionItem value="item-1">
                         <AccordionTrigger>
-                            Do you develop custom freelancing projects?
+                            What technologies do you use?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, all our projects are fully customized based on client needs.
+                            We use Next.js, React, Node.js, and AI-based tools for modern development.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-2">
                         <AccordionTrigger>
-                            Which technologies do you use?
+                            Do you build SEO optimized websites?
                         </AccordionTrigger>
                         <AccordionContent>
-                            We use React, Next.js, Node.js, and AI tools for development.
+                            Yes, every project is optimized for Google ranking and performance.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="item-3">
                         <AccordionTrigger>
-                            Do you provide SEO services?
+                            Do you support full project development?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, we ensure websites are optimized for Google ranking and performance.
-                        </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem value="item-4">
-                        <AccordionTrigger>
-                            Do you offer post-delivery support?
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            Yes, we provide maintenance and support after delivery.
+                            Yes, we handle complete lifecycle from idea to deployment.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -211,33 +208,23 @@ export default function FreelanceGuidePage() {
             </section>
 
             {/* ================= CTA ================= */}
-            <section className="max-w-5xl mx-auto mt-24">
+            <section className="max-w-5xl mx-auto mt-24 px-6 mb-16">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 md:p-14 rounded-3xl text-center shadow-xl">
 
                     <h2 className="text-2xl md:text-3xl font-bold">
-                        Ready to Build Your Project?
+                        Start Your Freelancing Project Today
                     </h2>
 
                     <p className="mt-4 text-blue-100 max-w-xl mx-auto">
-                        Turn your idea into a real-world product with our expert
-                        AI and full stack development team.
+                        Build scalable AI-powered and SEO-optimized applications with expert guidance.
                     </p>
 
-                    <div className="flex flex-col md:flex-row justify-center gap-4 mt-6">
+                    <Link href="/services/contact">
+                        <Button className="mt-6 bg-white text-blue-600 hover:bg-gray-200 px-6 py-5 text-lg">
+                            Contact Us
+                        </Button>
+                    </Link>
 
-                        <Link href="/services/contact">
-                            <Button className="bg-white text-blue-600 hover:bg-gray-200 px-6 py-5 text-lg shadow-md hover:scale-105 transition">
-                                Start Your Project
-                            </Button>
-                        </Link>
-
-                        <Link href="/">
-                            <Button className="border border-white text-white hover:bg-white hover:text-blue-600 px-6 py-5 text-lg">
-                                Back to Home
-                            </Button>
-                        </Link>
-
-                    </div>
                 </div>
             </section>
 

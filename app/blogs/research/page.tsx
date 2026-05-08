@@ -13,24 +13,33 @@ import { ArrowLeft } from "lucide-react";
 
 /* ================= SEO ================= */
 export const metadata: Metadata = {
+    metadataBase: new URL("https://www.nexalytech.com"),
+
     title:
-        "Research Paper Guidance & Publication Support | NexalyTech",
+        "Research Paper Writing, Formatting & Publication Support | NexalyTech",
+
     description:
-        "Get expert research paper guidance including writing, plagiarism reduction, AI content refinement, IEEE/Springer formatting, and journal publication support.",
+        "Get expert research paper guidance including writing, plagiarism reduction, AI content refinement, IEEE/Springer formatting, and journal publication support for students and researchers.",
+
     keywords: [
-        "research paper writing",
-        "plagiarism removal",
-        "IEEE paper format",
-        "Springer publication",
-        "AI content refinement",
-        "research guidance services",
-        "journal publication help",
+        "research paper writing service",
+        "IEEE paper formatting help",
+        "Springer publication support",
+        "plagiarism reduction service",
+        "AI research paper writing",
+        "journal publication guidance India",
+        "final year research project help",
+        "academic writing support",
     ],
+
+    alternates: {
+        canonical: "/blogs/research",
+    },
+
     openGraph: {
-        title:
-            "Research Paper Guidance & Publication | NexalyTech",
+        title: "Research Paper Guidance & Publication Support | NexalyTech",
         description:
-            "Complete support for writing, plagiarism removal, formatting, and publishing research papers.",
+            "Complete research paper support: writing, editing, plagiarism removal, formatting, and journal publication guidance.",
         url: "https://www.nexalytech.com/blogs/research",
         siteName: "NexalyTech",
         images: [
@@ -38,34 +47,58 @@ export const metadata: Metadata = {
                 url: "/research1.png",
                 width: 1200,
                 height: 630,
-                alt: "Research Paper Guidance",
+                alt: "Research Paper Guidance Services",
             },
         ],
         type: "article",
     },
+
     twitter: {
         card: "summary_large_image",
         title: "Research Paper Support | NexalyTech",
         description:
-            "End-to-end research paper guidance including writing and publication.",
+            "End-to-end research paper writing, editing, and publication support.",
         images: ["/research1.png"],
+    },
+};
+
+/* ================= STRUCTURED DATA ================= */
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Research Paper Guidance & Publication Support",
+    description:
+        "Expert academic research paper writing, formatting, plagiarism reduction, and publication support.",
+    author: {
+        "@type": "Organization",
+        name: "NexalyTech",
+    },
+    publisher: {
+        "@type": "Organization",
+        name: "NexalyTech",
     },
 };
 
 /* ================= DATA ================= */
 const services = [
-    "Topic Selection & Research",
-    "Paper Writing & Structuring",
-    "Plagiarism Reduction",
+    "Topic Selection & Research Planning",
+    "Research Paper Writing & Structuring",
+    "Plagiarism Reduction & Editing",
     "AI Content Refinement",
-    "Formatting (IEEE / Springer)",
-    "Journal & Conference Submission",
+    "IEEE / Springer Formatting",
+    "Journal & Conference Submission Support",
 ];
 
 /* ================= PAGE ================= */
 export default function ResearchBlogPage() {
     return (
         <main className="w-full min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100">
+
+            {/* JSON-LD */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             {/* ================= NAV ================= */}
             <nav className="max-w-6xl mx-auto px-6 pt-6">
@@ -81,15 +114,13 @@ export default function ResearchBlogPage() {
             {/* ================= HERO ================= */}
             <header className="max-w-4xl mx-auto text-center px-6 py-12">
                 <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                    Research Paper Guidance & Publication Support
+                    Research Paper Writing & Publication Support
                 </h1>
 
                 <p className="mt-5 text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                    Get complete support for <strong>research paper writing</strong>,
-                    <strong> plagiarism reduction</strong>,
-                    <strong> AI content refinement</strong>, and
-                    <strong> journal or conference publication</strong>.
-                    We help you turn ideas into high-quality, publication-ready papers.
+                    Get complete academic assistance for <strong>research paper writing</strong>,
+                    <strong> plagiarism reduction</strong>, <strong>AI refinement</strong>,
+                    and <strong>journal publication</strong> in IEEE, Springer, and Scopus-indexed journals.
                 </p>
             </header>
 
@@ -98,13 +129,32 @@ export default function ResearchBlogPage() {
                 <div className="relative w-full h-[320px] md:h-[420px] rounded-3xl overflow-hidden shadow-xl">
                     <Image
                         src="/research1.png"
-                        alt="Research paper writing and publication support"
+                        alt="Research paper writing and publication support service"
                         fill
                         priority
                         sizes="(max-width: 768px) 100vw, 900px"
                         className="object-cover"
                     />
                 </div>
+            </section>
+
+            {/* ================= SEO CONTENT BLOCK ================= */}
+            <section className="max-w-4xl mx-auto px-6 py-10 text-gray-700">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    End-to-End Research Paper Support for Students & Researchers
+                </h2>
+
+                <p className="text-sm leading-7">
+                    NexalyTech provides professional research paper guidance designed for
+                    engineering students, academic researchers, and professionals. Our
+                    services include topic selection, research structuring, writing support,
+                    plagiarism reduction, and formatting according to IEEE and Springer standards.
+                </p>
+
+                <p className="text-sm leading-7 mt-4">
+                    We also help refine AI-generated drafts into high-quality academic content
+                    and assist in journal submission processes to improve publication success rates.
+                </p>
             </section>
 
             {/* ================= SERVICES ================= */}
@@ -124,8 +174,7 @@ export default function ResearchBlogPage() {
                                     {item}
                                 </h3>
                                 <p className="mt-2 text-gray-600 text-sm leading-relaxed">
-                                    High-quality academic support ensuring your paper
-                                    meets publication standards.
+                                    Professional academic support to ensure your research meets publication standards.
                                 </p>
                             </CardContent>
                         </Card>
@@ -133,14 +182,12 @@ export default function ResearchBlogPage() {
                 </div>
             </section>
 
-            {/* ================= CONTENT BOOST (SEO TEXT) ================= */}
+            {/* ================= CONTENT BOOST ================= */}
             <section className="max-w-4xl mx-auto px-6 pb-10 text-center">
                 <p className="text-gray-600 leading-relaxed">
-                    Our research experts assist students and professionals in creating
-                    <strong> plagiarism-free research papers</strong>, improving
-                    <strong> AI-generated drafts</strong>, and ensuring proper
-                    <strong> citations, formatting, and submission</strong>.
-                    We specialize in <strong>IEEE, Springer, and Scopus-indexed journals</strong>.
+                    Our experts help you create <strong>plagiarism-free research papers</strong>,
+                    improve AI-generated drafts, and ensure proper <strong>citations, formatting,
+                        and journal submission readiness</strong> for academic success.
                 </p>
             </section>
 
@@ -154,50 +201,37 @@ export default function ResearchBlogPage() {
 
                     <AccordionItem value="1">
                         <AccordionTrigger>
-                            Do you help in writing complete research papers?
+                            Do you help with complete research paper writing?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, we provide end-to-end support including topic selection,
-                            writing, formatting, and submission.
+                            Yes, we provide full support from topic selection to final publication submission.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="2">
                         <AccordionTrigger>
-                            Can you reduce plagiarism?
+                            Can you reduce plagiarism in research papers?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, we optimize and rewrite content with proper citations
-                            to meet acceptable plagiarism levels.
+                            Yes, we refine and rewrite content to ensure originality and academic compliance.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="3">
                         <AccordionTrigger>
-                            Do you refine AI-generated content?
+                            Do you support IEEE and Springer formatting?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, we convert AI-generated drafts into human-like,
-                            academic-quality content suitable for publication.
+                            Yes, we format papers according to IEEE, Springer, and other journal guidelines.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="4">
                         <AccordionTrigger>
-                            Do you assist with IEEE or Springer publications?
+                            Do you help with journal publication?
                         </AccordionTrigger>
                         <AccordionContent>
-                            Yes, we guide formatting and submission for IEEE,
-                            Springer, and other indexed journals.
-                        </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem value="5">
-                        <AccordionTrigger>
-                            How long does it take?
-                        </AccordionTrigger>
-                        <AccordionContent>
-                            Most research papers take 1–3 weeks depending on complexity.
+                            Yes, we guide submission to indexed journals including Scopus and IEEE.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -208,12 +242,11 @@ export default function ResearchBlogPage() {
             <section className="max-w-5xl mx-auto px-6 pb-20">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 md:p-14 rounded-3xl text-center shadow-xl">
                     <h2 className="text-2xl md:text-3xl font-bold">
-                        Ready to Publish Your Research Paper?
+                        Start Your Research Publication Journey
                     </h2>
 
                     <p className="mt-4 text-blue-100 max-w-2xl mx-auto">
-                        Get expert support from idea to publication and submit
-                        your paper with confidence.
+                        Get expert academic support and publish your research paper with confidence.
                     </p>
 
                     <Link href="/services/contact">
