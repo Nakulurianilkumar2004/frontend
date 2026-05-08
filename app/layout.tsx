@@ -52,6 +52,15 @@ export const metadata: Metadata = {
     siteName: "NexalyTech",
     locale: "en_US",
     type: "website",
+
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "NexalyTech Logo",
+      },
+    ],
   },
 
   twitter: {
