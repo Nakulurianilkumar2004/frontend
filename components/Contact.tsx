@@ -47,11 +47,11 @@ const Contact: React.FC = () => {
                             </a>
 
                             <a
-                                href="mailto:nakulurianilkumar66@gmail.com"
+                                href="mailto:officialnexalytech@gmail.com"
                                 className="flex items-center justify-center md:justify-start gap-2 hover:text-blue-600 transition"
                             >
                                 <FiMail size={18} />
-                                <span>nakulurianilkumar66@gmail.com</span>
+                                <span>officialnexalytech@gmail.com</span>
                             </a>
 
                         </div>
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
                         <div className="flex justify-center md:justify-start gap-4 mt-6">
 
                             <a
-                                href="https://linkedin.com"
+                                href="https://www.linkedin.com/company/nexalytech/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Visit our LinkedIn profile"
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
                             </a>
 
                             <a
-                                href="https://instagram.com"
+                                href="https://www.instagram.com/nexalytech/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Visit our Instagram profile"
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
                             </a>
 
                             <a
-                                href="https://github.com"
+                                href="https://github.com/nexalytech"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Visit our GitHub profile"

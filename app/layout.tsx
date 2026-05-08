@@ -36,12 +36,22 @@ export const metadata: Metadata = {
     "minor projects",
     "major projects",
     "student academic support",
-    "AI training India"
+    "AI training India",
   ],
 
   robots: {
     index: true,
     follow: true,
+  },
+
+  alternates: {
+    canonical: "https://www.nexalytech.com",
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 
   openGraph: {
@@ -68,6 +78,11 @@ export const metadata: Metadata = {
     title: "NexalyTech",
     description:
       "AI Training, Freelancing, Research Guidance & Academic Projects.",
+    images: ["/logo.png"],
+  },
+
+  other: {
+    "google-site-verification": "",
   },
 };
 
@@ -81,6 +96,27 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${jakarta.variable} bg-white text-gray-900 antialiased`}
       >
+        {/* SEO STRUCTURED DATA (IMPORTANT FOR GOOGLE) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "NexalyTech",
+              url: "https://www.nexalytech.com",
+              logo: "https://www.nexalytech.com/logo.png",
+              sameAs: [
+                "https://www.youtube.com/@nexalytech",
+                "https://github.com/nexalytech",
+                "https://www.instagram.com/nexalytech/",
+                "https://x.com/nexalytech",
+                "https://www.linkedin.com/company/nexalytech/",
+              ],
+            }),
+          }}
+        />
+
         {children}
       </body>
     </html>

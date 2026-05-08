@@ -108,10 +108,10 @@ const Footer: React.FC = () => {
 
                             <li>
                                 <a
-                                    href="mailto:nakulurianilkumar66@gmail.com"
+                                    href="mailto:officialnexalytech@gmail.com"
                                     className="hover:text-white transition"
                                 >
-                                    nakulurianilkumar66@gmail.com
+                                    officialnexalytech@gmail.com
                                 </a>
                             </li>
                         </ul>
@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
                         <div className="flex gap-3 mt-5">
 
                             <a
-                                href="https://linkedin.com"
+                                href="https://www.linkedin.com/company/nexalytech/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Visit our LinkedIn profile"
@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
                             </a>
 
                             <a
-                                href="https://instagram.com"
+                                href="https://www.instagram.com/nexalytech/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Visit our Instagram profile"
@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
                             </a>
 
                             <a
-                                href="https://github.com"
+                                href="https://github.com/nexalytech"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Visit our GitHub profile"
