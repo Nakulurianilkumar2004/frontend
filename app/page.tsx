@@ -9,20 +9,25 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsappButton";
 
 export const metadata: Metadata = {
-  title: "NexalyTech | AI Courses, Freelancing & Project Guidance",
+  metadataBase: new URL("https://www.nexalytech.com"),
+
+  title:
+    "NexalyTech | AI Courses, Freelancing, Full Stack & Project Guidance for Students",
 
   description:
-    "NexalyTech helps students with AI training, freelancing opportunities, research paper writing, and complete support for minor & major academic projects.",
+    "NexalyTech provides AI training, freelancing opportunities, full stack development learning, research paper support, and complete academic project guidance for students in India.",
 
   keywords: [
     "NexalyTech",
     "AI training India",
     "freelancing for students",
+    "full stack development course",
     "research paper writing help",
     "major project guidance",
     "minor project support",
-    "final year projects",
-    "AI internship programs"
+    "final year projects India",
+    "AI internship programs",
+    "student tech learning platform",
   ],
 
   alternates: {
@@ -30,19 +35,28 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "NexalyTech",
+    title: "NexalyTech | AI, Freelancing & Project Guidance",
     description:
-      "AI Courses, Freelancing Opportunities & Academic Project Guidance for Students.",
+      "Learn AI, Full Stack Development, Freelancing & build real-world projects with NexalyTech.",
     url: "https://www.nexalytech.com",
     siteName: "NexalyTech",
     type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "NexalyTech - AI Courses & Freelancing Platform",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "NexalyTech",
+    title: "NexalyTech | AI & Freelancing Platform",
     description:
-      "AI Training, Freelancing & Research Guidance for Students.",
+      "AI Courses, Freelancing, Full Stack & Project Guidance for Students.",
+    images: ["/logo.png"],
   },
 
   robots: {
@@ -51,9 +65,31 @@ export const metadata: Metadata = {
   },
 };
 
+/* ================= ORGANIZATION SCHEMA (IMPORTANT FOR LOGO SEO) ================= */
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "NexalyTech",
+  url: "https://www.nexalytech.com",
+  logo: "https://www.nexalytech.com/logo.png",
+  sameAs: [
+    "https://www.linkedin.com/company/nexalytech/",
+    "https://www.instagram.com/nexalytech/",
+  ],
+};
+
 export default function Page() {
   return (
     <main className="w-full overflow-x-hidden">
+
+      {/* SEO STRUCTURED DATA */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
+
       <Navbar />
       <Hero />
       <Services />
