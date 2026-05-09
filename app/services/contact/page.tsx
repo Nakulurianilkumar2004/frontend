@@ -134,7 +134,7 @@ export default function ContactPage() {
                                 <div className="flex items-center gap-3">
                                     <Mail className="text-purple-600" />
                                     <span className="text-gray-700 text-sm sm:text-base break-all">
-                                        nakulurianilkumar66@gmail.com
+                                        officialnexalytech@gmail.com
                                     </span>
                                 </div>
 
@@ -199,8 +199,8 @@ export default function ContactPage() {
                                 {success && (
                                     <p
                                         className={`text-center text-sm ${success.includes("success")
-                                                ? "text-green-600"
-                                                : "text-red-500"
+                                            ? "text-green-600"
+                                            : "text-red-500"
                                             }`}
                                     >
                                         {success}
