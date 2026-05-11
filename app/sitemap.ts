@@ -3,69 +3,40 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = "https://www.nexalytech.com";
 
-    return [
-        // ================= HOME =================
-        {
-            url: `${baseUrl}/`,
-            lastModified: new Date(),
-        },
+    // All important indexable pages
+    const routes = [
+        // ================= MAIN =================
+        "/",
+        "/blogs",
 
-        // ================= BLOGS INDEX =================
-        {
-            url: `${baseUrl}/blogs`,
-            lastModified: new Date(),
-        },
-
-        // ================= BLOG PAGES =================
-        {
-            url: `${baseUrl}/blogs/career`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/blogs/course`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/blogs/freelancing`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/blogs/ai-learning-guide`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/blogs/projects`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/blogs/research`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/blogs/ailearning`,
-            lastModified: new Date(),
-        },
+        // ================= BLOGS =================
+        "/blogs/career",
+        "/blogs/course",
+        "/blogs/freelancing",
+        "/blogs/freelanceguide",
+        "/blogs/aillearning",
+        "/blogs/projects",
+        "/blogs/research",
 
         // ================= SERVICES =================
-        {
-            url: `${baseUrl}/services/contact`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/services/course`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/services/freelancing`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/services/minor`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/services/research`,
-            lastModified: new Date(),
-        },
+        "/services/contact",
+        "/services/course",
+        "/services/freelancing",
+        "/services/minor",
+        "/services/research",
     ];
+
+    return routes.map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: new Date("2026-05-11"),
+        changeFrequency: "weekly",
+        priority:
+            route === "/"
+                ? 1.0
+                : route.startsWith("/services")
+                    ? 0.9
+                    : route === "/blogs"
+                        ? 0.8
+                        : 0.7,
+    }));
 }
